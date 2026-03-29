@@ -70,7 +70,7 @@ A local web application for benchmarking embedding models and Ollama LLMs. Uploa
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/ai-benchmarking-dashboard.git
+git clone https://github.com/naku2001/Metrics.git
 cd ai-benchmarking-dashboard
 ```
 
