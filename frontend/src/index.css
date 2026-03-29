@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html, body, #root {
+    height: 100%;
+    background-color: #060a12;
+    color: #e2e8f0;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0c1220; }
+  ::-webkit-scrollbar-thumb { background: #1e2d42; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #2a3f5c; }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface border border-border rounded-sm shadow-inner-glow;
+  }
+
+  .card-elevated {
+    @apply bg-elevated border border-border rounded-sm shadow-inner-glow;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-base font-display font-semibold tracking-wider
+           px-5 py-2 rounded-sm uppercase text-sm
+           hover:bg-cyan-300 active:scale-95
+           transition-all duration-150
+           disabled:opacity-40 disabled:cursor-not-allowed disabled:active:scale-100;
+  }
+
+  .btn-ghost {
+    @apply border border-border text-text-secondary font-body text-sm
+           px-4 py-2 rounded-sm
+           hover:border-border-bright hover:text-text-primary
+           transition-all duration-150
+           disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2 py-0.5 rounded-sm
+           text-xs font-mono font-medium tracking-wide;
+  }
+
+  .input {
+    @apply w-full bg-base border border-border rounded-sm px-3 py-2
+           text-sm font-mono text-text-primary placeholder-text-muted
+           focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20
+           transition-colors duration-150;
+  }
+
+  .tab-btn {
+    @apply relative px-6 py-3 font-display font-semibold tracking-widest uppercase text-sm
+           text-text-muted hover:text-text-primary transition-colors duration-150;
+  }
+
+  .tab-btn.active {
+    @apply text-accent;
+  }
+
+  .tab-btn.active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 right-0 h-0.5 bg-accent;
+    box-shadow: 0 0 8px rgba(34,211,238,0.6);
+  }
+
+  .metric-value {
+    @apply font-mono text-accent tabular-nums;
+  }
+
+  .skeleton {
+    @apply bg-faint rounded-sm animate-pulse;
+  }
+
+  /* Dot grid background */
+  .dot-grid {
+    background-image: radial-gradient(circle, #1e2d42 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+@layer utilities {
+  .text-glow-accent { text-shadow: 0 0 12px rgba(34,211,238,0.5); }
+  .border-glow-accent { box-shadow: 0 0 0 1px rgba(34,211,238,0.3); }
+}

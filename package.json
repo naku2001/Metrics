@@ -1,0 +1,12 @@
+{
+  "name": "ai-bench",
+  "private": true,
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail --prefix-colors \"cyan.bold,magenta.bold\" --names \"backend,frontend\" \"cd backend && python -m uvicorn main:app --reload --port 8000\" \"cd frontend && npm run dev\"",
+    "setup": "pip install -r requirements.txt && cd frontend && npm install",
+    "setup:win": "pip install -r requirements.txt && cd frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
