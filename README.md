@@ -264,10 +264,6 @@ All metrics are calculated by **ranx** using the synthetic QA pairs as ground tr
 - The Ollama tab makes requests directly from the browser to `localhost:11434`, so Ollama must be running with `OLLAMA_ORIGINS=*`
 
 ---
-## Screenshots
-
-![Embedding Benchmark](image1.png)
-![Ollama Metrics](assets/image2.png)
 
 ## License
 
