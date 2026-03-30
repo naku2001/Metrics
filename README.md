@@ -266,8 +266,8 @@ All metrics are calculated by **ranx** using the synthetic QA pairs as ground tr
 ---
 ## Screenshots
 
-![Embedding Benchmark](Screenshot 2026-03-29 120136.png)
-![Ollama Metrics](assets/ollama.png)
+![Embedding Benchmark](image1.png)
+![Ollama Metrics](assets/image2.png)
 
 ## License
 
