@@ -1,6 +1,6 @@
 # AI Benchmarking Dashboard
 
-A local web application for benchmarking embedding models and Ollama LLMs. Upload a PDF, generate synthetic QA pairs, run retrieval benchmarks across multiple embedding models, and measure LLM inference performance — all running on your own hardware.
+A local web application for benchmarking embedding models and Ollama LLMs. Upload a PDF, generate synthetic QA pairs, run retrieval benchmarks across multiple embedding models, and measure LLM inference performance all running on your own hardware.
 
 ![Dark theme dashboard](https://img.shields.io/badge/theme-dark-0c1220?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.8%2B-3776ab?style=flat-square&logo=python&logoColor=white)
@@ -12,9 +12,9 @@ A local web application for benchmarking embedding models and Ollama LLMs. Uploa
 ## Features
 
 ### Embedding Benchmark
-- Upload any PDF — text is extracted, chunked (~300 words, 50-word overlap), and 3 synthetic QA pairs are generated per chunk via OpenRouter
+- Upload any PDF, text is extracted, chunked (~300 words, 50-word overlap), and 3 synthetic QA pairs are generated per chunk via OpenRouter
 - Benchmark up to 6 preset HuggingFace embedding models side-by-side
-- Models are downloaded from HuggingFace Hub and cached locally — a green/amber indicator shows cache status per model
+- Models are downloaded from HuggingFace Hub and cached locally a green/amber indicator shows cache status per model
 - Retrieval scoring via **ranx**: MRR, Recall@1/3/5/10, NDCG@1/3/5/10
 - Live step-by-step progress (Extract → Chunk → Generate QA → Download → Embed → Score)
 - NDCG@10 bar chart comparison across models
@@ -97,7 +97,7 @@ OPENROUTER_API_KEY=sk-or-v1-your-key-here
 OPENROUTER_MODEL=anthropic/claude-3-haiku
 ```
 
-> The API key can also be entered via the Settings panel in the UI — it will be written to `.env` automatically.
+> The API key can also be entered via the Settings panel in the UI and  it will be written to `.env` automatically.
 
 ---
 
